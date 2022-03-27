@@ -1,0 +1,14 @@
+# frozen_string_literal: true
+
+Style/Documentation:
+  Enabled: false
+AllCops:
+  EnabledByDefault: true
+  TargetRubyVersion: 2.6.6
+Bundler/GemComment:
+  Enabled: false
+Bundler/GemVersion:
+  Enabled: false
+Style/Copyright:
+  Enabled: false
+  AutocorrectNotice: 'Copyright 2022 (c) by snovviee'
