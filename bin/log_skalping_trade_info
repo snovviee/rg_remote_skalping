@@ -1,0 +1,19 @@
+#!/usr/bin/env ruby
+# frozen_string_literal: true
+
+require 'active_record'
+require 'telegram/bot'
+require_relative "../lib/database/connection"
+require_relative "../lib/strategies/scalping/trade_info"
+require_relative "../lib/configuration"
+require_relative "../models/strategies/scalping/trade"
+
+Database::Connection.establish_connection
+config = Configuration.new
+
+Telegram::Bot::Client.run(config.token) do |bot|
+  Strategies::Scalping::TradeInfo.start(
+    bot: bot,
+    trade: Trade.new
+  )
+end

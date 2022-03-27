@@ -1,0 +1,5 @@
+adapter: postgresql
+database: tg_remote_skalping_example
+encoding: unicode
+pool: 5
+timeout: 5000
